@@ -217,6 +217,7 @@ def main():
         "--disable-gpu",
         "--allow-file-access-from-files",
         f"--print-to-pdf={output_path}",
+        "--no-pdf-header-footer",
         "--print-to-pdf-no-header",
         f"file://{temp_full_html}"
     ]

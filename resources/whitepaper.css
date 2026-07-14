@@ -1,20 +1,23 @@
-/* Google Cloud Customer Engineer Whitepaper Professional Styling */
+/* Google Cloud Customer Engineer Whitepaper Professional Styling - V8 13.5pt Ultra-Generous Executive Standard */
 @page {
   margin: 25mm 20mm 25mm 20mm;
   size: A4;
 }
 
-body, h1, h2, h3, h4, th, td, p, li, blockquote {
-  font-family: "Google Sans", "Google Sans Display", "Roboto", "Arial Unicode MS", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "STHeiti", "Microsoft YaHei", sans-serif !important;
+body, h1, h2, h3, h4, th, td, p, li, blockquote, figcaption, span, div {
+  font-family: "Hiragino Sans GB", "Arial Unicode MS", "Google Sans", "Google Sans Text", "Roboto", sans-serif !important;
+  letter-spacing: normal !important; /* 强制零额外字距，锁死汉字原生方正结构 */
 }
 
 body {
-  line-height: 1.7;
+  line-height: 1.75;
   color: #1f2937;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-size: 10.5pt;
+  font-size: 13.5pt; /* 提升至 13.5pt 大气舒适公文字号，清晰有力、视野开阔 */
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4 {
@@ -22,57 +25,79 @@ h1, h2, h3, h4 {
   font-weight: 600 !important;
   page-break-after: avoid !important;
   break-after: avoid !important;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  letter-spacing: normal !important;
 }
 
 h1 {
-  font-size: 20pt;
-  border-bottom: 2.5px solid #1a73e8;
-  padding-bottom: 12px;
+  font-size: 26pt; /* 匹配 13.5pt 正文，主标题跃升至 26pt 气势如虹 */
+  border-bottom: 3px solid #1a73e8;
+  padding-bottom: 14px;
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 h2 {
-  font-size: 14pt;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 6px;
-  margin-top: 26px;
-  margin-bottom: 14px;
+  font-size: 18pt; /* 二级标题调至 18pt */
+  border-bottom: 1.5px solid #e5e7eb;
+  padding-bottom: 7px;
+  margin-top: 32px;
+  margin-bottom: 16px;
   color: #111827;
 }
 
 h3 {
-  font-size: 11.5pt;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 15pt; /* 三级标题调至 15pt */
+  margin-top: 24px;
+  margin-bottom: 12px;
   color: #1a73e8;
 }
 
+h4 {
+  font-size: 13.5pt;
+  margin-top: 18px;
+  margin-bottom: 9px;
+  color: #1f2937;
+}
+
 p, li {
-  margin-bottom: 10px;
-  text-align: justify;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-align: left !important;
+  line-height: 1.75;
+  letter-spacing: normal !important;
 }
 
 ul, ol {
-  padding-left: 20px;
-  margin-bottom: 14px;
+  padding-left: 24px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+li {
+  margin-bottom: 8px;
 }
 
 table {
   width: 100% !important;
   border-collapse: collapse;
-  margin: 18px 0;
-  font-size: 9pt;
+  margin: 20px 0;
+  font-size: 11.5pt; /* 表格字号调至 11.5pt，极大提升多列复杂表格清晰度 */
   page-break-inside: avoid !important;
   break-inside: avoid !important;
+  letter-spacing: normal !important;
 }
 
 th, td {
   border: 1px solid #cbd5e1;
-  padding: 9px 10px;
+  padding: 11px 14px;
   text-align: left;
-  vertical-align: top;
-  word-wrap: break-word !important;
+  vertical-align: middle;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.55;
+  letter-spacing: normal !important;
 }
 
 th {
@@ -88,30 +113,30 @@ tr:nth-child(even) td {
 code {
   background-color: #f1f5f9;
   color: #0f172a;
-  padding: 2px 5px;
+  padding: 2.5px 7px;
   border-radius: 4px;
-  font-size: 9pt;
+  font-size: 11.5pt; /* 内联代码调至 11.5pt */
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  white-space: pre-wrap !important;
-  word-wrap: break-word !important;
-  word-break: break-all !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  letter-spacing: normal !important;
 }
 
 pre {
   background-color: #0f172a !important;
   color: #f8fafc !important;
-  padding: 14px 16px !important;
-  border-radius: 8px;
-  font-size: 8.5pt !important;
-  line-height: 1.45;
+  padding: 16px 20px !important;
+  border-radius: 6px;
+  font-size: 11.2pt !important; /* 代码框调至 11.2pt，粗壮清晰易读 */
+  line-height: 1.55;
   margin: 16px 0;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   border: 1px solid #334155;
   white-space: pre-wrap !important;
-  word-wrap: break-word !important;
-  word-break: break-all !important;
-  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  letter-spacing: normal !important;
 }
 
 pre code {
@@ -120,29 +145,45 @@ pre code {
   padding: 0 !important;
   border-radius: 0;
   white-space: pre-wrap !important;
-  word-wrap: break-word !important;
-  word-break: break-all !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  letter-spacing: normal !important;
 }
 
+/* Optimize diagram & image display */
 img {
-  max-width: 95% !important;
+  max-width: 76% !important;
   height: auto;
   display: block;
-  margin: 24px auto;
+  margin: 18px auto 6px auto;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
+  border-radius: 4px;
 }
 
 blockquote {
   border-left: 4px solid #3b82f6;
   background-color: #eff6ff;
-  padding: 12px 16px;
-  margin: 16px 0;
-  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 18px 0;
+  border-radius: 0 6px 6px 0;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
 }
 
 blockquote p:last-child {
   margin-bottom: 0;
+}
+
+/* Helper for figure captions below diagrams */
+.caption, figcaption {
+  text-align: center;
+  font-size: 11pt; /* 图注调至 11pt */
+  color: #64748b;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-style: normal;
+  page-break-before: avoid !important;
+  break-before: avoid !important;
+  letter-spacing: normal !important;
 }
