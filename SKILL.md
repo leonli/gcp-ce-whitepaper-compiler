@@ -1,7 +1,7 @@
 ---
 name: gcp-ce-whitepaper-compiler
 description: >-
-  将包含 Mermaid 系统架构图、复杂的 Markdown 表格与公文样式的技术方案白皮书，直接调用本地 Google Chrome 内核极速编译为企业级的高精排版 PDF 文档。内置 GCP Customer Engineer (CE) 官方品牌美学（Hiragino Sans GB 优先中文字体栈、11.5pt 大气正文公文字号、零额外间距排版、公文黄金边距、多行代码模块化排版、内联 Base64 图表防 CORS 拦截）。当用户需要输出技术架构白皮书、解决方案指南、POC 总结报告或将 Markdown 转为高质量 PDF 时触发本技能。
+  将包含 Mermaid 系统架构图、复杂的 Markdown 表格与公文样式的技术方案白皮书，直接调用本地 Google Chrome 内核极速编译为企业级的高精排版 PDF 文档。内置 GCP Customer Engineer (CE) 官方品牌美学（Hiragino Sans GB 优先中文字体栈、13.5pt 大气舒适公文字号、零额外间距排版、公文黄金边距、多行代码模块化排版、内联 Base64 图表防 CORS 拦截）。当用户需要输出技术架构白皮书、解决方案指南、POC 总结报告或将 Markdown 转为高质量 PDF 时触发本技能。
 ---
 
 # GCP CE Whitepaper Compiler
@@ -9,9 +9,9 @@ description: >-
 ## Overview
 本技能是一个完全独立的本地命令行工具套件，专门为 Google Cloud Customer Engineer (CE) 及架构师群体量身打造。它能一键将编写好的 Markdown 技术方案（包含 Mermaid 架构图、数据表格、提示框 Alert 等）转化为排版严谨、符合 GCP 品牌美学的高规格 PDF 文档。
 
-核心排版与技术特性（V7 黄金公文标准）：
+核心排版与技术特性（V8 黄金公文标准）：
 - **GCP 品牌与视网膜中文字体栈**：优先选用原生视网膜级中文字体 `Hiragino Sans GB` (冬青黑体) 与 `PingFang SC` (苹方黑体)，并严格搭配 `letter-spacing: normal !important` 零额外字间距排版，彻底解决中英文混排时的间隙散乱与无头浏览器丢字空白问题。
-- **11.5pt 大气舒适公文字号与纵向节奏**：正文采用 `11.5pt` (行高 1.72) 黄金规格，一至三级标题分别锁定为 `22pt` / `15.5pt` / `13pt`，代码块为 `9.8pt`，表格为 `10pt`。保证在 A4 High-Res 静态文档中视觉清晰饱满、久读不累。
+- **13.5pt 大气舒适公文字号与纵向节奏**：正文采用 `13.5pt` (行高 1.75) 黄金规格，一至三级标题分别锁定为 `26pt` / `18pt` / `15pt`，代码块为 `11.2pt`，表格为 `11.5pt`。保证在 A4 High-Res 静态文档中视觉清晰有力、大气饱满、久读不累。
 - **零头尾干净输出 (`--no-pdf-header-footer`)**：驱动 Chrome 无头内核时强制追加 `--no-pdf-header-footer` 与 `--print-to-pdf-no-header` 双重消隐参数，自动斩除系统注入的日期、页码与本地 HTML 文件路径 URL。
 - **多行复杂命令行“步骤-代码对 (Modular Step-Code Pairs)”排版规范**：严格禁止将多步长命令塞入单一庞大 `<pre>` 黑框。要求分切为结构清晰的独立步骤（如 `**步骤 1：...**`）配套专属小巧代码框，并借助 `\` 折行缩进对齐，彻底消除中折乱码与分页孤白。
 - **公文级黄金边距**：严格锁定上下 25mm、左右 20mm 的标准化留白。
