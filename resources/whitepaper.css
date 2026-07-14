@@ -1,4 +1,4 @@
-/* Google Cloud Customer Engineer Whitepaper Professional Styling - V10 18pt Majestic Executive Presentation Standard */
+/* Google Cloud Customer Engineer Whitepaper Professional Styling - V11 18pt Body & Fixed Table Layout Standard */
 @page {
   margin: 25mm 20mm 25mm 20mm;
   size: A4;
@@ -15,7 +15,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-size: 18pt; /* 提升至 18pt 磅礴气场，字字如巨擘，视网膜荧幕与演示全屏极度震撼 */
+  font-size: 18pt; /* 保持 18pt 磅礴气场正文，视网膜屏幕与演示全屏极度震撼 */
   word-break: normal;
   overflow-wrap: break-word;
 }
@@ -31,7 +31,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 34pt; /* 匹配 18pt 正文，主标题跃升至 34pt 顶层威望 */
+  font-size: 34pt; /* 匹配 18pt 正文，主标题跃升至 34pt */
   border-bottom: 4px solid #1a73e8;
   padding-bottom: 18px;
   margin-top: 0;
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24pt; /* 二级标题调至 24pt */
+  font-size: 24pt; /* 二级标题 24pt */
   border-bottom: 2px solid #e5e7eb;
   padding-bottom: 9px;
   margin-top: 38px;
@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20pt; /* 三级标题调至 20pt */
+  font-size: 20pt; /* 三级标题 20pt */
   margin-top: 30px;
   margin-bottom: 15px;
   color: #1a73e8;
@@ -79,11 +79,13 @@ li {
   margin-bottom: 10px;
 }
 
+/* 核心优化：强制表格固定列宽分配与智能折行，彻底解决表格被截断/看不全的问题 */
 table {
   width: 100% !important;
+  table-layout: fixed !important;
   border-collapse: collapse;
   margin: 24px 0;
-  font-size: 15.5pt; /* 表格字号调至 15.5pt，清晰亮丽，一览无余 */
+  font-size: 14pt; /* 表格内文字调至 14pt 舒适比例，确保在固定宽度内排版清晰充裕 */
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   letter-spacing: normal !important;
@@ -91,12 +93,13 @@ table {
 
 th, td {
   border: 1px solid #cbd5e1;
-  padding: 14px 18px;
+  padding: 12px 14px;
   text-align: left;
   vertical-align: middle;
   word-break: normal !important;
   overflow-wrap: break-word !important;
-  line-height: 1.6;
+  word-wrap: break-word !important;
+  line-height: 1.55;
   letter-spacing: normal !important;
 }
 
@@ -127,7 +130,7 @@ pre {
   color: #f8fafc !important;
   padding: 20px 24px !important;
   border-radius: 6px;
-  font-size: 15pt !important; /* 代码框调至 15pt，字粗磅礴，极度醒目 */
+  font-size: 15pt !important; /* 代码框调至 15pt，粗细适中、清楚极佳 */
   line-height: 1.6;
   margin: 20px 0;
   page-break-inside: avoid !important;

@@ -1,7 +1,7 @@
 ---
 name: gcp-ce-whitepaper-compiler
 description: >-
-  将包含 Mermaid 系统架构图、复杂的 Markdown 表格与公文样式的技术方案白皮书，直接调用本地 Google Chrome 内核极速编译为企业级的高精排版 PDF 文档。内置 GCP Customer Engineer (CE) 官方品牌美学（Hiragino Sans GB 优先中文字体栈、18pt 磅礴气场演示/演讲级公文字号、零额外间距排版、公文黄金边距、多行代码模块化排版、内联 Base64 图表防 CORS 拦截）。当用户需要输出技术架构白皮书、解决方案指南、POC 总结报告或将 Markdown 转为高质量 PDF 时触发本技能。
+  将包含 Mermaid 系统架构图、复杂的 Markdown 表格与公文样式的技术方案白皮书，直接调用本地 Google Chrome 内核极速编译为企业级的高精排版 PDF 文档。内置 GCP Customer Engineer (CE) 官方品牌美学（Hiragino Sans GB 优先中文字体栈、18pt 磅礴气场演示/演讲级公文字号、强制 table-layout: fixed 防表格截断、零额外间距排版、公文黄金边距、多行代码模块化排版、内联 Base64 图表防 CORS 拦截）。当用户需要输出技术架构白皮书、解决方案指南、POC 总结报告或将 Markdown 转为高质量 PDF 时触发本技能。
 ---
 
 # GCP CE Whitepaper Compiler
@@ -9,9 +9,10 @@ description: >-
 ## Overview
 本技能是一个完全独立的本地命令行工具套件，专门为 Google Cloud Customer Engineer (CE) 及架构师群体量身打造。它能一键将编写好的 Markdown 技术方案（包含 Mermaid 架构图、数据表格、提示框 Alert 等）转化为排版严谨、符合 GCP 品牌美学的高规格 PDF 文档。
 
-核心排版与技术特性（V10 黄金公文/演讲演示标准）：
+核心排版与技术特性（V11 黄金公文/客户呈递标准）：
 - **GCP 品牌与视网膜中文字体栈**：优先选用原生视网膜级中文字体 `Hiragino Sans GB` (冬青黑体) 与 `PingFang SC` (苹方黑体)，并严格搭配 `letter-spacing: normal !important` 零额外字间距排版，彻底解决中英文混排时的间隙散乱与无头浏览器丢字空白问题。
-- **18pt 磅礴气场演示/演讲级字号与节奏**：正文采用 `18pt` (行高 1.8) 宏伟演示规格，一至三级标题分别锁定为 `34pt` / `24pt` / `20pt`，代码块为 `15pt`，表格与内联代码为 `15.5pt`。保证在 A4 High-Res 静态文档及高清大屏演示中字字如巨擘、威慑力拉满、极度醒目易读。
+- **18pt 磅礴气场演示/演讲级字号与节奏**：正文采用 `18pt` (行高 1.8) 宏伟演示规格，一至三级标题分别锁定为 `34pt` / `24pt` / `20pt`，代码块为 `15pt`，内联代码为 `15.5pt`。保证在 A4 High-Res 静态文档及高清大屏演示中字字如巨擘、极度醒目易读。
+- **强制固定列宽表格布局 (`table-layout: fixed`) 防截断**：表格外框锁定 `width: 100% !important; table-layout: fixed !important;`，字号设为舒适的 `14pt`，配合 `word-wrap: break-word`，确保多列复杂表格在 A4 页面内完美自适应分配，绝对不会发生右侧溢出或看不全的问题。
 - **零头尾干净输出 (`--no-pdf-header-footer`)**：驱动 Chrome 无头内核时强制追加 `--no-pdf-header-footer` 与 `--print-to-pdf-no-header` 双重消隐参数，自动斩除系统注入的日期、页码与本地 HTML 文件路径 URL。
 - **多行复杂命令行“步骤-代码对 (Modular Step-Code Pairs)”排版规范**：严格禁止将多步长命令塞入单一庞大 `<pre>` 黑框。要求分切为结构清晰的独立步骤（如 `**步骤 1：...**`）配套专属小巧代码框，并借助 `\` 折行缩进对齐，彻底消除中折乱码与分页孤白。
 - **公文级黄金边距**：严格锁定上下 25mm、左右 20mm 的标准化留白。
@@ -34,21 +35,21 @@ python3 /Users/lileon/.gemini/skills/gcp-ce-whitepaper-compiler/scripts/compile_
 python3 /Users/lileon/.gemini/skills/gcp-ce-whitepaper-compiler/scripts/compile_whitepaper.py architecture_plan.md -o ./dist/GCP_Solution_Whitepaper.pdf
 ```
 
-## Markdown 编撰规范与最佳实践 (CE Best Practices)
+## Markdown 编撰规范与最佳实践 (CE Best Practices & External Tone)
 
-为保证经由本套件编译出的 PDF 能够达到最高企业级公文排版水准，编撰 Markdown 源码时务必遵循以下准则：
+为保证经由本套件编译出的 PDF 能够达到最高企业级公文及客户呈递（Customer-Facing）水准，编撰 Markdown 源码时务必遵循以下准则：
 
-1. **复杂 Shell/参数操作必须模块化处理 (Modular Code Blocks)**：
+1. **外部客户交流沟通话术与建设性基调 (Constructive Customer Tone)**：
+   - 面对涉及权限溢出或凭据泄露的架构场景，**切勿使用贬损 GCP 角色设计的负面表述**（如“历史包袱”、“安全漏洞”、“隐性高风险”或“设计缺陷”），避免让外部客户产生对云平台底层安全的疑虑。
+   - 应严格遵循 **“职责解耦、架构分工”** 的建设性话术：说明预定义角色（如 `roles/monitoring.editor`）作为**基础配置管理角色 (Setup & Provisioning Role)**，专供平台管理员在控制台初始化资源使用；而 `roles/monitoring.metricWriter` 是专为外部插件设计的**日常运行时采集角色 (Runtime Role)**。强调发生风险的原因在于第三方跨云节点将“配置角色”错用于“运行时 Agent”，体现 Google Cloud CE 团队专业、准确且优雅的架构引导能力。
+
+2. **复杂 Shell/参数操作必须模块化处理 (Modular Code Blocks)**：
    - 如果遇到包含多个逻辑步骤（如 `gcloud` 导出 -> `jq` 清洗 -> `gcloud` 创建 -> `gcloud` 解绑/绑定）的配置指南，切勿全部堆砌在同一个 ` ```bash ` 长代码块中。
    - 应将其切分为独立的步骤标题（例如：`**步骤 1：导出现有权限清单**`），正文简述逻辑后，紧跟该步专属的 1~3 行代码框。
    - 所有超过 70 字符的长命令或 JSON 过滤表达式，必须按语义拆行并追加 `\` 连接符缩进对齐，防止 PDF 输出时发生中折。
 
-2. **架构图注与防跨页保护 (`page-break-inside`)**：
-   - 两段正文或表格间插入 Mermaid 架构图时，应控制图表横向跨度（样式库默认限制最大宽度 `75%~78%`）。
-   - 图表正下方应搭配规范的图注说明，例如 `<div class="caption">图 1：多云异构环境下的凭据隔离与权限逃逸路径 (Ref: b/534639686)</div>`。
-
-3. **表格内容与换行限制**：
-   - 表格单元格默认启用 `word-break: normal; overflow-wrap: break-word;`。对于 API 权限名称（如 `serviceusage.services.enable`），会自动在 `.` 处折行而不会切断英文单词。
+3. **表格内容规划与列宽优化 (Fixed-Table Best Practices)**：
+   - 为配合 `table-layout: fixed` 布局，建议在 Markdown 中优先设计 3~4 列的精简对比表（例如：`IAM 角色名称 | 包含服务启用权限 | 最佳实践与适用场景评估`）。避免在单个表格中堆砌过长的冗余段落，确保各单元格空间充裕、一目了然。
 
 ## Utility Scripts
 ### compile_whitepaper.py
