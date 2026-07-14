@@ -1,4 +1,4 @@
-/* Google Cloud Customer Engineer Whitepaper Professional Styling - V12 14px Clean Executive Standard */
+/* Google Cloud Customer Engineer Whitepaper Professional Styling - V13 15.5px Executive Standard */
 @page {
   margin: 25mm 20mm 25mm 20mm;
   size: A4;
@@ -10,12 +10,12 @@ body, h1, h2, h3, h4, th, td, p, li, blockquote, figcaption, span, div {
 }
 
 body {
-  line-height: 1.68;
+  line-height: 1.72;
   color: #1f2937;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-size: 14px; /* 调整至 14px (约 10.5pt) 黄金公文规范字号，精致舒适、久读不累 */
+  font-size: 15.5px; /* 设定为 15.5px 绝佳黄金规格，视野充实清晰、久读不累 */
   word-break: normal;
   overflow-wrap: break-word;
 }
@@ -31,52 +31,52 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 26px; /* 匹配 14px 正文，主标题设为 26px 威严适度 */
+  font-size: 28px; /* 匹配 15.5px 正文，主标题设为 28px */
   border-bottom: 2.5px solid #1a73e8;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 h2 {
-  font-size: 18px; /* 二级标题 18px */
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 6px;
-  margin-top: 26px;
-  margin-bottom: 14px;
+  font-size: 20px; /* 二级标题 20px */
+  border-bottom: 1.5px solid #e5e7eb;
+  padding-bottom: 7px;
+  margin-top: 30px;
+  margin-bottom: 15px;
   color: #111827;
 }
 
 h3 {
-  font-size: 15px; /* 三级标题 15px */
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 16.5px; /* 三级标题 16.5px */
+  margin-top: 22px;
+  margin-bottom: 11px;
   color: #1a73e8;
 }
 
 h4 {
-  font-size: 14px;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  font-size: 15.5px;
+  margin-top: 18px;
+  margin-bottom: 9px;
   color: #1f2937;
 }
 
 p, li {
   margin-top: 0;
-  margin-bottom: 11px;
+  margin-bottom: 12px;
   text-align: left !important;
-  line-height: 1.68;
+  line-height: 1.72;
   letter-spacing: normal !important;
 }
 
 ul, ol {
-  padding-left: 22px;
-  margin-top: 4px;
-  margin-bottom: 15px;
+  padding-left: 24px;
+  margin-top: 5px;
+  margin-bottom: 16px;
 }
 
 li {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 /* 核心优化：强制表格固定列宽分配与智能折行，彻底解决表格被截断/看不全的问题 */
@@ -84,8 +84,8 @@ table {
   width: 100% !important;
   table-layout: fixed !important;
   border-collapse: collapse;
-  margin: 18px 0;
-  font-size: 13px; /* 表格字号 13px，在固定列宽下内容充裕、清晰易读 */
+  margin: 20px 0;
+  font-size: 14px; /* 表格字号 14px，在固定列宽下排版充裕易读 */
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   letter-spacing: normal !important;
@@ -93,13 +93,13 @@ table {
 
 th, td {
   border: 1px solid #cbd5e1;
-  padding: 10px 12px;
+  padding: 11px 13px;
   text-align: left;
   vertical-align: middle;
   word-break: normal !important;
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
-  line-height: 1.52;
+  line-height: 1.55;
   letter-spacing: normal !important;
 }
 
@@ -116,9 +116,9 @@ tr:nth-child(even) td {
 code {
   background-color: #f1f5f9;
   color: #0f172a;
-  padding: 2px 6px;
+  padding: 2.5px 7px;
   border-radius: 4px;
-  font-size: 13px; /* 内联代码 13px */
+  font-size: 14px; /* 内联代码 14px */
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   word-break: normal !important;
   overflow-wrap: break-word !important;
@@ -128,11 +128,11 @@ code {
 pre {
   background-color: #0f172a !important;
   color: #f8fafc !important;
-  padding: 14px 16px !important;
+  padding: 16px 18px !important;
   border-radius: 6px;
-  font-size: 12.5px !important; /* 代码框 12.5px，精致利落、对齐规整 */
-  line-height: 1.52;
-  margin: 16px 0;
+  font-size: 13.5px !important; /* 代码框 13.5px，清晰利落、排版对齐规整 */
+  line-height: 1.55;
+  margin: 18px 0;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   border: 1px solid #334155;
@@ -155,10 +155,10 @@ pre code {
 
 /* Optimize diagram & image display */
 img {
-  max-width: 76% !important;
+  max-width: 77% !important;
   height: auto;
   display: block;
-  margin: 16px auto 6px auto;
+  margin: 18px auto 7px auto;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   border-radius: 4px;
@@ -167,8 +167,8 @@ img {
 blockquote {
   border-left: 4px solid #3b82f6;
   background-color: #eff6ff;
-  padding: 14px 18px;
-  margin: 16px 0;
+  padding: 16px 20px;
+  margin: 18px 0;
   border-radius: 0 6px 6px 0;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
@@ -181,10 +181,10 @@ blockquote p:last-child {
 /* Helper for figure captions below diagrams */
 .caption, figcaption {
   text-align: center;
-  font-size: 12px; /* 图注 12px */
+  font-size: 12.5px; /* 图注 12.5px */
   color: #64748b;
   margin-top: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-style: normal;
   page-break-before: avoid !important;
   break-before: avoid !important;
