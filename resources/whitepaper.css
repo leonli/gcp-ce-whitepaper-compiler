@@ -1,4 +1,4 @@
-/* Google Cloud Customer Engineer Whitepaper Professional Styling - V9 15.5pt Bold Executive Presentation Standard */
+/* Google Cloud Customer Engineer Whitepaper Professional Styling - V10 18pt Majestic Executive Presentation Standard */
 @page {
   margin: 25mm 20mm 25mm 20mm;
   size: A4;
@@ -10,12 +10,12 @@ body, h1, h2, h3, h4, th, td, p, li, blockquote, figcaption, span, div {
 }
 
 body {
-  line-height: 1.78;
+  line-height: 1.8;
   color: #1f2937;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-size: 15.5pt; /* 提升至 15.5pt 宏大宽敞气场，视网膜屏幕与纸质打印全方位清晰醒目 */
+  font-size: 18pt; /* 提升至 18pt 磅礴气场，字字如巨擘，视网膜荧幕与演示全屏极度震撼 */
   word-break: normal;
   overflow-wrap: break-word;
 }
@@ -31,59 +31,59 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 30pt; /* 匹配 15.5pt 正文，主标题跃升至 30pt 顶级威慑力 */
-  border-bottom: 3.5px solid #1a73e8;
-  padding-bottom: 16px;
+  font-size: 34pt; /* 匹配 18pt 正文，主标题跃升至 34pt 顶层威望 */
+  border-bottom: 4px solid #1a73e8;
+  padding-bottom: 18px;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 21pt; /* 二级标题调至 21pt */
+  font-size: 24pt; /* 二级标题调至 24pt */
   border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 8px;
-  margin-top: 36px;
-  margin-bottom: 18px;
+  padding-bottom: 9px;
+  margin-top: 38px;
+  margin-bottom: 20px;
   color: #111827;
 }
 
 h3 {
-  font-size: 17.5pt; /* 三级标题调至 17.5pt */
-  margin-top: 28px;
-  margin-bottom: 14px;
+  font-size: 20pt; /* 三级标题调至 20pt */
+  margin-top: 30px;
+  margin-bottom: 15px;
   color: #1a73e8;
 }
 
 h4 {
-  font-size: 15.5pt;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 18pt;
+  margin-top: 22px;
+  margin-bottom: 12px;
   color: #1f2937;
 }
 
 p, li {
   margin-top: 0;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   text-align: left !important;
-  line-height: 1.78;
+  line-height: 1.8;
   letter-spacing: normal !important;
 }
 
 ul, ol {
-  padding-left: 26px;
+  padding-left: 28px;
   margin-top: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 li {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 table {
   width: 100% !important;
   border-collapse: collapse;
-  margin: 22px 0;
-  font-size: 13.5pt; /* 表格字号调至 13.5pt，清晰度极佳，一目了然 */
+  margin: 24px 0;
+  font-size: 15.5pt; /* 表格字号调至 15.5pt，清晰亮丽，一览无余 */
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   letter-spacing: normal !important;
@@ -91,12 +91,12 @@ table {
 
 th, td {
   border: 1px solid #cbd5e1;
-  padding: 12px 16px;
+  padding: 14px 18px;
   text-align: left;
   vertical-align: middle;
   word-break: normal !important;
   overflow-wrap: break-word !important;
-  line-height: 1.58;
+  line-height: 1.6;
   letter-spacing: normal !important;
 }
 
@@ -113,9 +113,9 @@ tr:nth-child(even) td {
 code {
   background-color: #f1f5f9;
   color: #0f172a;
-  padding: 3px 8px;
+  padding: 3.5px 9px;
   border-radius: 4px;
-  font-size: 13.5pt; /* 内联代码调至 13.5pt */
+  font-size: 15.5pt; /* 内联代码调至 15.5pt */
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   word-break: normal !important;
   overflow-wrap: break-word !important;
@@ -125,11 +125,11 @@ code {
 pre {
   background-color: #0f172a !important;
   color: #f8fafc !important;
-  padding: 18px 22px !important;
+  padding: 20px 24px !important;
   border-radius: 6px;
-  font-size: 13pt !important; /* 代码框调至 13pt，粗实清晰，无任何可读性障碍 */
-  line-height: 1.58;
-  margin: 18px 0;
+  font-size: 15pt !important; /* 代码框调至 15pt，字粗磅礴，极度醒目 */
+  line-height: 1.6;
+  margin: 20px 0;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   border: 1px solid #334155;
@@ -152,20 +152,20 @@ pre code {
 
 /* Optimize diagram & image display */
 img {
-  max-width: 78% !important;
+  max-width: 80% !important;
   height: auto;
   display: block;
-  margin: 20px auto 8px auto;
+  margin: 22px auto 10px auto;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
   border-radius: 4px;
 }
 
 blockquote {
-  border-left: 4.5px solid #3b82f6;
+  border-left: 5px solid #3b82f6;
   background-color: #eff6ff;
-  padding: 18px 22px;
-  margin: 20px 0;
+  padding: 20px 24px;
+  margin: 22px 0;
   border-radius: 0 6px 6px 0;
   page-break-inside: avoid !important;
   break-inside: avoid !important;
@@ -178,10 +178,10 @@ blockquote p:last-child {
 /* Helper for figure captions below diagrams */
 .caption, figcaption {
   text-align: center;
-  font-size: 12.5pt; /* 图注调至 12.5pt */
+  font-size: 14.5pt; /* 图注调至 14.5pt */
   color: #64748b;
-  margin-top: 8px;
-  margin-bottom: 22px;
+  margin-top: 10px;
+  margin-bottom: 24px;
   font-style: normal;
   page-break-before: avoid !important;
   break-before: avoid !important;
